@@ -27,7 +27,7 @@ body {
 
 .btn {
   color: white;
-  background-color: #FF900E;
+  background-color: #ff900e;
   font-size: 20px;
   font-weight: 600;
   border-radius: 8px;
@@ -76,34 +76,33 @@ header .header-container .banner img {
   border-radius: 8px;
 }
 
-section.features .feature-container {
+section.features .feature-container .feature-intro {
   padding: 100px 0;
   display: flex;
   align-items: center;
 }
-section.features .feature-container .feature-images {
+section.features .feature-container .feature-intro .feature-images {
   padding-left: 3rem;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: red;
   gap: 1rem;
   place-items: center;
 }
-section.features .feature-container .feature-images .feature-img {
+section.features .feature-container .feature-intro .feature-images .feature-img {
   overflow: hidden;
   border-radius: 8px;
 }
-section.features .feature-container .feature-images .feature-img:hover img {
+section.features .feature-container .feature-intro .feature-images .feature-img:hover img {
   transform: scale(105%);
   overflow: hidden;
 }
-section.features .feature-container .feature-images .feature-img img {
+section.features .feature-container .feature-intro .feature-images .feature-img img {
   width: 100%;
   max-width: 342px;
   transition: 1s;
 }
-section.features .feature-container .feature-texts {
+section.features .feature-container .feature-intro .feature-texts {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -112,28 +111,91 @@ section.features .feature-container .feature-texts {
   gap: 1rem;
   padding-left: 3rem;
 }
+section.features .feature-container .feature-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+section.features .feature-container .feature-lists .feature-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section.features .feature-container .feature-lists .feature-wrapper .feature-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section.features .feature-container .feature-lists .feature-wrapper .feature-boxes .feature-box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 20px rgb(218, 217, 217);
+  border-radius: 8px;
+  justify-content: center;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  gap: 0.5rem;
+}
+section.features .feature-container .feature-lists .feature-wrapper .feature-boxes .feature-box .feature-heading {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+section.features .feature-container .feature-lists .feature-image {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section.features .feature-container .feature-lists .feature-image img {
+  width: 100%;
+  max-width: 708px;
+}
+section.features .feature-container .feature-lists .feature-image button {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  padding: 2rem;
+  transition: 0.5s;
+}
+section.features .feature-container .feature-lists .feature-image button:hover {
+  scale: 1.05;
+}
+section.features .feature-container .feature-lists .feature-image button span {
+  font-size: 2.8125rem;
+}
 
 @media screen and (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
     gap: 1rem;
   }
-  section.features .feature-container {
+  section.features .feature-container .feature-intro {
     flex-direction: column;
     gap: 2rem;
   }
-  section.features .feature-container .feature-images {
+  section.features .feature-container .feature-intro .feature-images {
     padding: 0;
+  }
+  section.features .feature-container .feature-lists {
+    flex-direction: column;
+  }
+  section.features .feature-container .feature-lists .feature-image button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media screen and (max-width: 576px) {
   .container {
     max-width: 100%;
   }
-  section.features .feature-container .feature-images {
+  section.features .feature-container .feature-intro .feature-images {
     grid-template-columns: 1fr;
   }
-  section.features .feature-container .feature-texts {
+  section.features .feature-container .feature-intro .feature-texts {
     padding: 0;
     align-items: center;
     text-align: center;
