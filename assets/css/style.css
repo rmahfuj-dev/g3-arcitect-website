@@ -189,9 +189,6 @@ section.features .feature-container .feature-lists .feature-image button span {
   }
 }
 @media screen and (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
   section.features .feature-container .feature-intro .feature-images {
     grid-template-columns: 1fr;
   }
